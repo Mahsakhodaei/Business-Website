@@ -40,6 +40,9 @@ h5,
 p {
   color: var(--color-title);
 }
+.subtitle {
+  text-transform: uppercase;
+}
 @media screen and (max-width: 1024px) {
   body {
     font-size: 1.4rem;
@@ -182,9 +185,6 @@ p {
   text-align: center;
   margin-top: 5rem;
 }
-.works__title {
-  margin-top: 1rem;
-}
 .works-content {
   display: flex;
   flex-direction: row;
@@ -223,13 +223,18 @@ p {
 .comments-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-top: 6rem;
+  justify-content: space-between;
+  margin: 6rem 0;
 }
 .comments-list__item {
+  height:350px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between ;
   background-color: var(--color-white);
   border-radius: 4px;
-  max-width: 350px;
+  flex-basis: 350px;
+  margin: 1rem;
 }
 .comment__body {
   text-align: start;
@@ -238,9 +243,77 @@ p {
 .comment-info {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding: 1rem 1.5rem;
+  border-top: 1px dashed #ccc;
 }
 .comment-info__person {
   color: var(--color-subtitle);
   margin-left: 0.5rem;
+}
+.comment-container {
+  max-width:1024px;
+  margin:0 auto;
+}
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.companies__img {
+  display: block;
+  margin: 1rem;
+}
+/*------------------- Portfolio Section -------------------- */
+.portfolio {
+  text-align: center;
+  padding: 5rem 0;
+}
+.portfolio-items{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.portfolio__item {
+ flex-basis: 350px;
+ margin: 2rem;
+ border-radius: 10px;
+ overflow: hidden;
+}
+.portfolio__img {
+  width: 100%;
+  height: 100%;
+}
+/*------------------- footer Section -------------------- */
+.newsletter {
+  background-color: var(--color-primary);
+  padding: 5rem 0;
+}
+.newsletter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter__text {
+  color: var(--color-white);
+}
+.newsletter__email {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  flex-basis: 320px;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+.newsletter__input {
+  border: none;
+  outline: none;
+}
+.copy-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 0;
 }
