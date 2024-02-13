@@ -64,7 +64,7 @@ p {
 
 @media screen and (max-width: 1280px) {
   .container {
-    max-width: 1000px;
+    max-width: 992px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -88,7 +88,7 @@ p {
   border: 0;
   cursor: pointer;
   padding: 1rem 2.5rem;
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
   white-space: nowrap;
   font-size: 1.8rem;
@@ -119,14 +119,6 @@ p {
   align-items: center;
   padding: 1.5rem 0;
 }
-/* .nav-logo {
-    background-color: #081d43;
-}
-.nav-logo__img {
-    width: 100%;
-    height: 100%;
-    background-color: #87bc25;
-} */
 .nav {
   display: flex;
   flex-direction: row;
@@ -144,10 +136,37 @@ p {
   text-decoration: none;
   color: var(--color-subtitle);
 }
-
+.header__icon {
+  font-size: 1.8rem;
+  color: var(--color-subtitle);
+  display: none;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
   .menu {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: -210px;
+    bottom: 0;
+    background-color: var(--color-subtitle);
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    padding: 3rem 3rem;
+    z-index: 10;
+    transition: all 0.3s ease-out;
+  }
+  .menu__item a {
+    font-size: 1.2rem;
+    color: var(--color-white);
+  }
+  .menu-btn {
     display: none;
+  }
+  .header__icon {
+    display: block;
   }
 }
 /*------------------- Slider Section ------------------- */
@@ -179,6 +198,19 @@ p {
   flex-direction: column;
   gap: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+  .slider-content {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .slider-content__wrapper {
+    max-width: 100%;
+  }
+  .slider-content__btns {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
 /*------------------------ main ------------------------ */
 /*------------------- works section -------------------- */
 .works {
@@ -190,20 +222,39 @@ p {
   flex-direction: row;
   justify-content: space-around;
   margin-top: 5rem;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 .works-content__title {
   color: var(--color-subtitle);
   font-size: 1.8rem;
 }
-.works-content__text {
-  max-width: 350px;
+.works-content__item {
+  flex-basis: 300px;
+  flex-shrink: 0;
 }
+/* .works-content__text {
+  max-width: 350px;
+} */
 .wrapper-img {
   max-width: 500px;
   margin: 5rem auto;
 }
 .works__img {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .works-content__item {
+    flex-basis: 250px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .works-content__item {
+    max-width: 100%;
+  }
+  .wrapper-img {
+    max-width: 300px;
+  }
 }
 /*------------------- comments section -------------------- */
 .comments {
@@ -227,10 +278,11 @@ p {
   margin: 6rem 0;
 }
 .comments-list__item {
-  height:350px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content:space-between ;
+
+  justify-content: space-between;
   background-color: var(--color-white);
   border-radius: 4px;
   flex-basis: 350px;
@@ -252,24 +304,26 @@ p {
   margin-left: 0.5rem;
 }
 .comment-container {
-  max-width:1024px;
-  margin:0 auto;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .companies {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .companies__img {
   display: block;
   margin: 1rem;
 }
+
 /*------------------- Portfolio Section -------------------- */
 .portfolio {
   text-align: center;
   padding: 5rem 0;
 }
-.portfolio-items{
+.portfolio-items {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -277,14 +331,15 @@ p {
   margin-top: 4rem;
 }
 .portfolio__item {
- flex-basis: 350px;
- margin: 2rem;
- border-radius: 10px;
- overflow: hidden;
+  flex-basis: 350px;
+  margin: 2rem;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .portfolio__img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 /*------------------- footer Section -------------------- */
 .newsletter {
@@ -302,7 +357,7 @@ p {
 .newsletter__email {
   display: flex;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: var(--color-white);
   flex-basis: 320px;
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
@@ -316,4 +371,12 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 0;
+}
+.copy-right__text {
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
+  .copy-right {
+    flex-direction: column;
+  }
 }

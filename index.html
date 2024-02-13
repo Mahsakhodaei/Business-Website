@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -34,12 +35,17 @@
           <li class="menu__item"><a href="#">Portfolio</a></li>
         </ul>
       </nav>
-      <button class="btn btn__primary">Contact us</button>
+      <button class="btn btn__primary menu-btn">Contact us</button>
+      <span class="header__icon"><i class="fa fa-bars"></i></span>
     </header>
     <!-- Slider Section -->
     <section class="slider container">
       <div class="slider-content">
-        <div class="slider-content__left">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          class="slider-content__right"
+        >
           <div class="slider-content__wrapper">
             <h1 class="slider-content__title">
               Create a new generation website for your business.
@@ -57,7 +63,11 @@
           </div>
         </div>
 
-        <div class="slider-content__right">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          class="slider-content__left"
+        >
           <img
             src="./assets/images/header-img.svg"
             alt="header image"
@@ -69,7 +79,11 @@
     <!-- main -->
     <main class="main">
       <!-- Works Section -->
-      <section class="works container">
+      <section
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        class="works container"
+      >
         <h5 class="subtitle">HOW IT WORK</h5>
         <h2 class="title">Three Simple Step To Started Working Process</h2>
         <div class="works-content">
@@ -108,7 +122,12 @@
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered.
           </p>
-          <div class="comment-container">
+          <div
+            
+            data-aos-duration="2000"
+            data-aos-anchor-placement="center-center"
+            class="comment-container"
+          >
             <div class="comments-list">
               <div class="comments-list__item">
                 <p class="comment__body">
@@ -200,42 +219,66 @@
         <h5 class="subtitle">PORTFOLIO</h5>
         <h2 class="title">Three Simple Step To Started Working Process</h2>
         <div class="portfolio-items">
-          <div class="portfolio__item">
+          <div
+            class="portfolio__item"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
             <img
               src="./assets/images/portfolio-1.jpg"
               alt=""
               class="portfolio__img"
             />
           </div>
-          <div class="portfolio__item">
+          <div
+            class="portfolio__item"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             <img
               src="./assets/images/portfolio-2.jpg"
               alt=""
               class="portfolio__img"
             />
           </div>
-          <div class="portfolio__item">
+          <div
+            class="portfolio__item"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <img
               src="./assets/images/portfolio-3.jpg"
               alt=""
               class="portfolio__img"
             />
           </div>
-          <div class="portfolio__item">
+          <div
+            class="portfolio__item"
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+          >
             <img
               src="./assets/images/portfolio-4.jpg"
               alt=""
               class="portfolio__img"
             />
           </div>
-          <div class="portfolio__item">
+          <div
+            class="portfolio__item"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+          >
             <img
               src="./assets/images/portfolio-5.jpg"
               alt=""
               class="portfolio__img"
             />
           </div>
-          <div class="portfolio__item">
+          <div
+            class="portfolio__item"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+          >
             <img
               src="./assets/images/portfolio-6.jpg"
               alt=""
@@ -275,5 +318,11 @@
         </p>
       </section>
     </footer>
+
+    <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
