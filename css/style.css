@@ -169,6 +169,11 @@ p {
     display: block;
   }
 }
+@media screen and (max-width: 640px) {
+  .header {
+    margin:auto 1.5rem;
+  }
+}
 /*------------------- Slider Section ------------------- */
 .slider {
   padding: 5rem 0;
@@ -209,6 +214,11 @@ p {
   .slider-content__btns {
     flex-wrap: wrap;
     align-items: flex-start;
+  }
+}
+@media screen and (max-width: 640px) {
+  .slider-content{
+    margin: auto 2rem;
   }
 }
 /*------------------------ main ------------------------ */
@@ -281,7 +291,6 @@ p {
   height: 350px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
   background-color: var(--color-white);
   border-radius: 4px;
@@ -296,7 +305,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   border-top: 1px dashed #ccc;
 }
 .comment-info__person {
@@ -317,7 +326,27 @@ p {
   display: block;
   margin: 1rem;
 }
-
+@media screen and (max-width: 768px) {
+  .comment-container {
+    max-width: 640px;
+  }
+  .comments-list__item {
+    flex-basis: 300px;
+    height: 250px;
+    flex-shrink: 0;
+  }
+  .comments-list {
+    overflow-x: auto;
+  }
+  .companies {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .comment-container {
+    max-width: 100%;
+  }
+}
 /*------------------- Portfolio Section -------------------- */
 .portfolio {
   text-align: center;
@@ -331,7 +360,7 @@ p {
   margin-top: 4rem;
 }
 .portfolio__item {
-  flex-basis: 350px;
+  flex-basis: 250px;
   margin: 2rem;
   border-radius: 4px;
   overflow: hidden;
@@ -340,6 +369,11 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .portfolio-items {
+    justify-content: center;
+  }
 }
 /*------------------- footer Section -------------------- */
 .newsletter {
@@ -365,6 +399,7 @@ p {
 .newsletter__input {
   border: none;
   outline: none;
+  width: 100%;
 }
 .copy-right {
   display: flex;
@@ -378,5 +413,22 @@ p {
 @media screen and (max-width: 768px) {
   .copy-right {
     flex-direction: column;
+  }
+  .newsletter-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .newsletter__email {
+    flex-basis: 100%;
+    /* align-self: center; */
+  }
+  .newsletter {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .newsletter-wrapper {
+    margin: auto 2rem;
   }
 }
